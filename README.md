@@ -68,9 +68,9 @@ INNER JOIN users u ON b.user_id = u.id
 INNER JOIN vehicles v ON b.vehicle_id = v.id
 ORDER BY b.booking_id;
 ```
-```
-Query 2: EXISTS Subquery
-SQL-- Find vehicles never booked
+## Query 2: EXISTS Subquery
+```SQL
+-- Find vehicles never booked
 SELECT
     v.id AS vehicle_id,
     v.name,
@@ -86,9 +86,9 @@ WHERE NOT EXISTS (
     WHERE b.vehicle_id = v.id
 );
 ```
-```
-Query 3: WHERE Filtering
-SQL-- Find available vehicles by type (example: cars)
+## Query 3: WHERE Filtering
+```SQL
+-- Find available vehicles by type (example: cars)
 SELECT
     v.id AS vehicle_id,
     v.name,
@@ -101,9 +101,9 @@ FROM vehicles v
 WHERE v.type = 'car'
   AND v.status = 'available';
 ```
-```
-Query 4: GROUP BY with HAVING
-SQL-- Find vehicles with more than 2 bookings
+## Query 4: GROUP BY with HAVING
+```SQL
+-- Find vehicles with more than 2 bookings
 SELECT
     v.name AS vehicle_name,
     COUNT(b.booking_id) AS total_bookings
@@ -114,8 +114,8 @@ HAVING COUNT(b.booking_id) > 2
 ORDER BY total_bookings DESC;
 
 ```
-```
-🚀 Getting Started
+
+## 🚀 Getting Started
 Installation Steps
 SQLCREATE DATABASE vehicle_rental;
 USE vehicle_rental;
@@ -137,8 +137,8 @@ Normalization: 3NF compliant design
 Indexing: Optimized for common query performance
 Constraints: Data validation at database level
 Relationships: Proper foreign key setup
-```
-📁 Project Structure
+
+## 📁 Project Structure
 textL2-B6-Assignment-03/
 ├── README.md          # This file
 ├── schema.sql         # Database schema creation
@@ -157,7 +157,7 @@ ERD creation skills
 SQL query optimization
 Relational database management
 
-``
+
 ## 👨‍💻 Developer Info
 
 - **Name:** Md. Shahariar Hafiz  
