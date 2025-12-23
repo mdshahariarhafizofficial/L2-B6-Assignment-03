@@ -138,17 +138,6 @@ Indexing: Optimized for common query performance
 Constraints: Data validation at database level
 Relationships: Proper foreign key setup
 
-## 📁 Project Structure
-textL2-B6-Assignment-03/
-├── README.md          # This file
-├── schema.sql         # Database schema creation
-├── queries.sql        # All assignment queries
-└── (optional) sample_data.sql
-🧪 Sample Data Included
-
-3 users (2 customers, 1 admin)
-4 vehicles (car, bike, truck)
-4 booking records with various statuses
 
 🎓 Learning Outcomes
 
