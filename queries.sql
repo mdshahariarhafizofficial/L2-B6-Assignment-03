@@ -40,3 +40,12 @@ FROM vehicles v
 WHERE v.type = 'car'
 AND v.status = 'available';
 
+-- Query 4: GROUP BY and HAVING - Vehicles with more than 2 bookings
+SELECT
+v.name AS vehicle_name,
+COUNT(b.booking_id) AS total_bookings
+FROM vehicles v
+INNER JOIN bookings b ON v.id = b.vehicle_id
+GROUP BY v.id, v.name
+HAVING COUNT(b.booking_id) > 2
+ORDER BY total_bookings DESC;
