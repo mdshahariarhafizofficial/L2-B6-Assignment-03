@@ -11,3 +11,19 @@ INNER JOIN users u ON b.user_id = u.id
 INNER JOIN vehicles v ON b.vehicle_id = v.id
 ORDER BY b.booking_id;
 
+-- Query 2: EXISTS - Find all vehicles that have never been booked
+SELECT
+v.id AS vehicle_id,
+v.name,
+v.type,
+v.model,
+v.registration_number,
+v.rental_price,
+v.status
+FROM vehicles v
+WHERE NOT EXISTS (
+SELECT 1
+FROM bookings b
+WHERE b.vehicle_id = v.id
+);
+
