@@ -27,3 +27,16 @@ FROM bookings b
 WHERE b.vehicle_id = v.id
 );
 
+-- Query 3: WHERE - Retrieve all available vehicles of a specific type (e.g. cars)
+SELECT
+v.id AS vehicle_id,
+v.name,
+v.type,
+v.model,
+v.registration_number,
+v.rental_price,
+v.status
+FROM vehicles v
+WHERE v.type = 'car'
+AND v.status = 'available';
+
