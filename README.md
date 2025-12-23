@@ -10,7 +10,7 @@ A comprehensive database solution for managing a modern vehicle rental service w
 - Ensure data integrity and consistency
 
 ## 🗺️ Entity Relationship Diagram (ERD)
-**DrawSQL Link:** [INSERT_YOUR_ERD_LINK_HERE] *(Replace this with your actual public DrawSQL link)*
+**DrawSQL Link:** https://drawsql.app/teams/shahariar/diagrams/vehicle-rental-system-erd-design
 
 ## 📊 Database Schema
 
@@ -148,6 +148,7 @@ ERD creation skills
 SQL query optimization
 Relational database management
 
+```
 ## 👨‍💻 Developer Info
 
 - **Name:** Md. Shahariar Hafiz  
