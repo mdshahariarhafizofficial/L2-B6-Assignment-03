@@ -67,6 +67,7 @@ FROM bookings b
 INNER JOIN users u ON b.user_id = u.id
 INNER JOIN vehicles v ON b.vehicle_id = v.id
 ORDER BY b.booking_id;
+```
 Query 2: EXISTS Subquery
 SQL-- Find vehicles never booked
 SELECT
@@ -129,6 +130,7 @@ Indexing: Optimized for common query performance
 Constraints: Data validation at database level
 Relationships: Proper foreign key setup
 
+``
 📁 Project Structure
 textL2-B6-Assignment-03/
 ├── README.md          # This file
@@ -148,7 +150,7 @@ ERD creation skills
 SQL query optimization
 Relational database management
 
-```
+``
 ## 👨‍💻 Developer Info
 
 - **Name:** Md. Shahariar Hafiz  
