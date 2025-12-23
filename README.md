@@ -68,6 +68,7 @@ INNER JOIN users u ON b.user_id = u.id
 INNER JOIN vehicles v ON b.vehicle_id = v.id
 ORDER BY b.booking_id;
 ```
+```
 Query 2: EXISTS Subquery
 SQL-- Find vehicles never booked
 SELECT
@@ -84,6 +85,8 @@ WHERE NOT EXISTS (
     FROM bookings b
     WHERE b.vehicle_id = v.id
 );
+```
+```
 Query 3: WHERE Filtering
 SQL-- Find available vehicles by type (example: cars)
 SELECT
@@ -97,6 +100,8 @@ SELECT
 FROM vehicles v
 WHERE v.type = 'car'
   AND v.status = 'available';
+```
+```
 Query 4: GROUP BY with HAVING
 SQL-- Find vehicles with more than 2 bookings
 SELECT
@@ -107,6 +112,9 @@ INNER JOIN bookings b ON v.id = b.vehicle_id
 GROUP BY v.id, v.name
 HAVING COUNT(b.booking_id) > 2
 ORDER BY total_bookings DESC;
+
+```
+```
 🚀 Getting Started
 Installation Steps
 SQLCREATE DATABASE vehicle_rental;
@@ -129,8 +137,7 @@ Normalization: 3NF compliant design
 Indexing: Optimized for common query performance
 Constraints: Data validation at database level
 Relationships: Proper foreign key setup
-
-``
+```
 📁 Project Structure
 textL2-B6-Assignment-03/
 ├── README.md          # This file
